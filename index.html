@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bad Motivation Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ui-glow" aria-hidden="true"></div>
+    <div class="floating-emojis" aria-hidden="true">
+      <span>🚀</span>
+      <span>🍕</span>
+      <span>💸</span>
+      <span>🤡</span>
+      <span>🔥</span>
+      <span>💀</span>
+    </div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <main class="page-wrapper">
+      <section class="hero-panel">
+        <div class="hero-copy">
+          <span class="hero-badge">🔥 100% Unqualified Advice</span>
+          <h1>Bad Motivation Generator</h1>
+          <p>
+            Get AI-generated advice so terrible that it might accidentally
+            improve your life.
+          </p>
+          <div class="hero-actions">
+            <button id="generateBtn" class="button button-primary">
+              Generate Terrible Advice
+            </button>
+            <button id="shareHeroBtn" class="button button-ghost">
+              Share with Friends
+            </button>
+          </div>
+          <div class="theme-toggle-row">
+            <label class="theme-switch">
+              <input id="themeToggle" type="checkbox" />
+              <span>Light Mode</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="hero-panel-card">
+          <div class="card-topline">
+            <div class="avatar-ring" aria-hidden="true">
+              <div class="avatar-core">AI</div>
+            </div>
+            <div class="hero-stats">
+              <div>AI Confidence <strong id="confidenceHero">121%</strong></div>
+              <div>
+                Bad Decisions Generated <strong id="counterHero">11</strong>
+              </div>
+              <div>User Laugh Rate <strong>98%</strong></div>
+            </div>
+          </div>
+
+          <div class="hero-card-body">
+            <div class="hero-loader hidden" id="loadingHero">
+              <div class="spinner"></div>
+              <span>Generating nonsense...</span>
+            </div>
+            <blockquote class="hero-quote" id="quoteHero">
+              "Ask fewer questions. Ship faster. Regret everything later."
+            </blockquote>
+          </div>
+
+          <div class="hero-card-actions">
+            <button id="copyBtn" class="button button-secondary">Copy</button>
+            <button id="shareXBtn" class="button button-secondary">
+              Share to X
+            </button>
+            <button id="saveBtn" class="button button-secondary">
+              Save Favorite
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories-section">
+        <div class="section-title-row">
+          <h2>Choose your flavor of failure</h2>
+        </div>
+        <div class="category-grid" id="categoryGrid"></div>
+      </section>
+
+      <section class="features-section">
+        <div class="section-title-row">
+          <h2>Why this product is dangerously shareable</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Powered by Questionable AI</h3>
+            <p>A mysterious algorithm makes poor choices fast. Very fast.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Scientifically Unverified</h3>
+            <p>Nothing here has been validated in a lab. That’s the point.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Generates Regret Instantly</h3>
+            <p>Every line is optimized for maximum second-guessing.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Shareable Bad Decisions</h3>
+            <p>Perfect for blowing up your feed and making friends worried.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="social-proof-section">
+        <div class="section-title-row">
+          <h2>What people say after following it</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <p>
+              “I followed the advice and immediately got promoted to customer.”
+            </p>
+            <span>⭐⭐⭐⭐⭐</span>
+          </article>
+          <article class="testimonial-card">
+            <p>“Lost all my savings but gained perspective.”</p>
+            <span>⭐⭐⭐⭐⭐</span>
+          </article>
+          <article class="testimonial-card">
+            <p>“This AI understands failure better than I do.”</p>
+            <span>⭐⭐⭐⭐⭐</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="leaderboard-section">
+        <div class="section-title-row">
+          <h2>Community Hall of Shame</h2>
+        </div>
+        <div class="leaderboard-grid">
+          <article class="leader-card">
+            <h3>Worst Advice of the Day</h3>
+            <p id="leaderWorst">Ask less, iterate more. Quickly and vaguely.</p>
+          </article>
+          <article class="leader-card">
+            <h3>Most Shared Bad Advice</h3>
+            <p id="leaderShared">
+              If it looks expensive, you're probably succeeding.
+            </p>
+          </article>
+          <article class="leader-card">
+            <h3>Professional Regret Collector</h3>
+            <p>Achievement unlocked after 10 copies of chaos.</p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <p>
+          Warning: Following this advice may result in unexpected success,
+          failure, or confusion.
+        </p>
+      </footer>
+    </main>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
