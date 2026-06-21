@@ -58,7 +58,6 @@ const shareXBtn = document.getElementById("shareXBtn");
 const saveBtn = document.getElementById("saveBtn");
 const categoriesGrid = document.getElementById("categoryGrid");
 const adviceQuote = document.getElementById("quoteHero");
-const loadingHero = document.getElementById("loadingHero");
 const confidenceHero = document.getElementById("confidenceHero");
 const counterHero = document.getElementById("counterHero");
 const leaderWorst = document.getElementById("leaderWorst");
@@ -163,7 +162,6 @@ function setBackground() {
 }
 
 function generateAdvice() {
-  loadingHero.classList.remove("hidden");
   adviceQuote.classList.add("dimmed");
   generateBtn.disabled = true;
 
@@ -180,7 +178,6 @@ function generateAdvice() {
     updateLeaderboards();
     showToast(randomItem(BADGES));
     setBackground();
-    loadingHero.classList.add("hidden");
     adviceQuote.classList.remove("dimmed");
     generateBtn.disabled = false;
   }, 900);
